@@ -5,25 +5,24 @@ using UnityEngine;
 public class CameraTracking : MonoBehaviour
 {
     public GameObject player;
-    float speed = 5f;
-    float yOffset = 3f;
-    float zOffset = 5f;
+    private float smoothTime = 0.2f;
+    private Vector3 velocity = Vector3.zero;
+    private float yOffset = 6f;
+    private float zOffset = 8f;
+
     // Start is called before the first frame update
     void Start()
     {
         this.transform.rotation = Quaternion.Euler(35f, 0, 0);
     }
 
-    // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        float interpolation = speed * Time.deltaTime;
+        Vector3 targetPosition = this.transform.position;
+        targetPosition.x = player.transform.position.x;
+        targetPosition.z = player.transform.position.z - zOffset;
+        targetPosition.y = yOffset;
 
-        Vector3 position = this.transform.position;
-        position.x = Mathf.Lerp(this.transform.position.x, player.transform.position.x, interpolation);
-        position.y = yOffset;
-        position.z = Mathf.Lerp(this.transform.position.z, player.transform.position.z - zOffset, interpolation);
-
-        this.transform.position = position;
+        this.transform.position = Vector3.SmoothDamp(this.transform.position, targetPosition, ref velocity, smoothTime);
     }
 }
