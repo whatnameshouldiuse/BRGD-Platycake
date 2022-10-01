@@ -7,8 +7,8 @@ public class CameraTracking : MonoBehaviour
     public GameObject player;
     private float smoothTime = 0.2f;
     private Vector3 velocity = Vector3.zero;
-    private float yOffset = 6f;
-    private float zOffset = 8f;
+    private float yOffset = 12f;
+    private float zOffset = 16f;
 
     // Start is called before the first frame update
     void Start()
