@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Inventory : MonoBehaviour
 {
     public struct Item {
-        bool isIngredient;
+        public bool isIngredient;
         public Sprite sprite;
 
         public Item(bool isIngredient, Sprite sprite) {
@@ -56,8 +56,17 @@ public class Inventory : MonoBehaviour
             Item item = itemQueue.Dequeue();
             GameObject itemObject = Instantiate(worldItem) as GameObject;
             itemObject.GetComponent<SpriteRenderer>().sprite = item.sprite;
+            itemObject.GetComponent<WorldItem>().item = item;
             itemObject.transform.position = this.transform.position;
             itemObject.GetComponent<Rigidbody>().velocity = new Vector3(2f, 0f, 0f);
+            display();
+        }
+    }
+
+    private void rotateItems() {
+        if(itemQueue.Count > 0) {
+            Item item = itemQueue.Dequeue();
+            itemQueue.Enqueue(item);
             display();
         }
     }
@@ -67,6 +76,9 @@ public class Inventory : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.E)) {
             dropItem();
+        }
+        if(Input.GetKeyDown(KeyCode.Q)) {
+            rotateItems();
         }
     }
 }
