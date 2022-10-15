@@ -56,7 +56,11 @@ public class Inventory : MonoBehaviour
             Item item = itemQueue.Dequeue();
             GameObject itemObject = Instantiate(worldItem) as GameObject;
             itemObject.GetComponent<SpriteRenderer>().sprite = item.sprite;
-            itemObject.GetComponent<WorldItem>().item = item;
+
+            WorldItem worldItemScript = itemObject.GetComponent<WorldItem>();
+            worldItemScript.SetItem(item);
+            worldItemScript.SetInventory(this);
+
             itemObject.transform.position = this.transform.position;
             itemObject.GetComponent<Rigidbody>().velocity = new Vector3(2f, 0f, 0f);
             display();
@@ -69,6 +73,14 @@ public class Inventory : MonoBehaviour
             itemQueue.Enqueue(item);
             display();
         }
+    }
+
+    // Return true if AddItem operation was successful
+    public bool AddItem(Item item) {
+        if(itemQueue.Count >= 3) return false;
+        itemQueue.Enqueue(item);
+        display();
+        return true;
     }
 
     // Update is called once per frame

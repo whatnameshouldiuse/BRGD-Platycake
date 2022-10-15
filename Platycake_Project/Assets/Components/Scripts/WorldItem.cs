@@ -4,7 +4,24 @@ using UnityEngine;
 
 public class WorldItem : MonoBehaviour
 {
-    public Inventory.Item item;
+    private Inventory.Item item;
+    private Inventory inventory;
+
+    void OnTriggerEnter(Collider collider) {
+        if(collider.tag == "Player") {
+            if(this.inventory.AddItem(this.item)) {
+                Destroy(this.gameObject);
+            }
+        }
+    }
+
+    public void SetItem(Inventory.Item item) {
+        this.item = item;
+    }
+
+    public void SetInventory(Inventory inventory) {
+        this.inventory = inventory;
+    }
 
     // Start is called before the first frame update
     void Start()
