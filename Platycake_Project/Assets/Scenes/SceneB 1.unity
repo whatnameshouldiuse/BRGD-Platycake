@@ -990,6 +990,7 @@ GameObject:
   - component: {fileID: 1016905637}
   - component: {fileID: 1016905640}
   - component: {fileID: 1016905639}
+  - component: {fileID: 1016905641}
   m_Layer: 0
   m_Name: Platypus
   m_TagString: Untagged
@@ -1062,6 +1063,26 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1016905636}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!95 &1016905641
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1016905636}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 89447d33737c7b24ca12bdd57f29871a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1486415966
 GameObject:
   m_ObjectHideFlags: 0
@@ -1077,8 +1098,6 @@ GameObject:
   - component: {fileID: 1486415967}
   - component: {fileID: 1486415974}
   - component: {fileID: 1486415975}
-  - component: {fileID: 1486415976}
-  - component: {fileID: 1486415977}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1220,44 +1239,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d9cc457c43fcdadfb54a9c392af3416, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!111 &1486415976
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1486415966}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 0}
-  m_Animations:
-  - {fileID: 7400000, guid: 09df2ed48bc18344f8c348627591d459, type: 2}
-  - {fileID: 7400000, guid: 1d3059e1d5dd59a4db1bc9e1a322f7e6, type: 2}
-  - {fileID: 7400000, guid: 2b9bd4e090f7df343bd2d9975960e0a3, type: 2}
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 1
---- !u!95 &1486415977
-Animator:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1486415966}
-  m_Enabled: 0
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &1631065716
 PrefabInstance:
   m_ObjectHideFlags: 0
