@@ -5,15 +5,15 @@ using UnityEngine;
 public class CameraTracking : MonoBehaviour
 {
     public GameObject player;
-    private float smoothTime = 0.2f;
+    public float smoothTime = 0.2f;
     private Vector3 velocity = Vector3.zero;
-    private float yOffset = 12f;
-    private float zOffset = 16f;
+    public float yOffset = 12f;
+    public float zOffset = 16f;
 
     // Start is called before the first frame update
     void Start()
     {
-        this.transform.rotation = Quaternion.Euler(35f, 0, 0);
+        this.transform.rotation = Quaternion.Euler(45f, 0, 0);
     }
 
     void FixedUpdate()
