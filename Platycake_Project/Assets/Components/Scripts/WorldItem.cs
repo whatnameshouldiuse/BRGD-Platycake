@@ -8,16 +8,12 @@ public class WorldItem : MonoBehaviour
     private Inventory inventory;
     private float cooldown;
 
-    void OnTriggerEnter(Collider collider) {
-        if (collider.tag == "Player" && cooldown == 0) {
-            if(this.inventory.AddItem(this.item)) {
-                Destroy(this.gameObject);
-            }
-        }
-    }
-
     public void SetItem(Inventory.Item item) {
         this.item = item;
+    }
+
+    public Inventory.Item GetItem() {
+        return this.item;
     }
 
     public void SetInventory(Inventory inventory) {
