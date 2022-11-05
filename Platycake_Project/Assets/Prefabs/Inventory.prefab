@@ -127,8 +127,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprites:
-  - {fileID: 21300000, guid: 08e92b0eee60b703c87e63a853df09f8, type: 3}
-  - {fileID: 21300000, guid: 23982894309054d339b3b114a7704122, type: 3}
+  - {fileID: 21300000, guid: dceb340cdb5f943ef98d6c3845a6cb2f, type: 3}
+  - {fileID: 21300000, guid: f19fba19c53b544dbb2f1c2fe5e9c20a, type: 3}
+  - {fileID: 21300000, guid: a0b6199ab3f1c46a6ace6fd86e85d7fc, type: 3}
+  - {fileID: 21300000, guid: 71be9ce08b86e481c836f4d1fd7def02, type: 3}
+  - {fileID: 21300000, guid: 6d871275e59f248d79096cd1f2f7910a, type: 3}
   inventoryItem: {fileID: 4743458213321756014, guid: cdd5fc3ad3ba51a54a72e082377a9ffc,
     type: 3}
   worldItem: {fileID: 410605925446991712, guid: d1e274ba169155307b664e04e5904fd4,

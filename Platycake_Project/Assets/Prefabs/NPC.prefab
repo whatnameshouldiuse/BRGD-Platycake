@@ -248,6 +248,8 @@ GameObject:
   - component: {fileID: -8720611212432521473}
   - component: {fileID: 7599942018225052229}
   - component: {fileID: -4178509710664245106}
+  - component: {fileID: 7055289912915821080}
+  - component: {fileID: 8901850017923365021}
   m_Layer: 0
   m_Name: NPC
   m_TagString: Untagged
@@ -335,9 +337,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8fa4801e0a406383bcf21b2f3e1df3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  itemTrade:
+    want:
+      isIngredient: 0
+      fromPlayer: 0
+      sprite: {fileID: 0}
+    have:
+      isIngredient: 0
+      fromPlayer: 0
+      sprite: {fileID: 0}
   canvas: {fileID: 2547995615147620872}
   dialogueList: []
   dialogueText: {fileID: 2182888068021446821}
+  worldItem: {fileID: 410605925446991712, guid: d1e274ba169155307b664e04e5904fd4,
+    type: 3}
 --- !u!114 &-4178509710664245106
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -350,3 +363,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d9cc457c43fcdadfb54a9c392af3416, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &7055289912915821080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6299965501110725557}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9877f831adbc480fca67f4f19978cfea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemList: []
+--- !u!135 &8901850017923365021
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6299965501110725557}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 6.24
+  m_Center: {x: 0, y: -5.02, z: 0}

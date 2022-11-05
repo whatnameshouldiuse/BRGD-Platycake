@@ -2,15 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System;
 
 public class Inventory : MonoBehaviour
 {
+    [Serializable]
     public struct Item {
         public bool isIngredient;
+        public bool fromPlayer;
         public Sprite sprite;
 
-        public Item(bool isIngredient, Sprite sprite) {
+        public Item(bool isIngredient, bool fromPlayer, Sprite sprite) {
             this.isIngredient = isIngredient;
+            this.fromPlayer = fromPlayer;
             this.sprite = sprite;
         }
     }
@@ -24,9 +28,9 @@ public class Inventory : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        itemQueue.Enqueue(new Item(true, this.sprites[0]));
-        itemQueue.Enqueue(new Item(true, this.sprites[1]));
-        itemQueue.Enqueue(new Item(true, this.sprites[0]));
+        itemQueue.Enqueue(new Item(true, true, this.sprites[0]));
+        itemQueue.Enqueue(new Item(true, true, this.sprites[1]));
+        itemQueue.Enqueue(new Item(true, true, this.sprites[2]));
         display();
     }
 
@@ -58,8 +62,8 @@ public class Inventory : MonoBehaviour
             itemObject.GetComponent<SpriteRenderer>().sprite = item.sprite;
 
             WorldItem worldItemScript = itemObject.GetComponent<WorldItem>();
+            item.fromPlayer = true;
             worldItemScript.SetItem(item);
-            worldItemScript.SetInventory(this);
 
             itemObject.transform.position = this.transform.position;
             itemObject.GetComponent<Rigidbody>().velocity = new Vector3(2f, 0f, 0f);
