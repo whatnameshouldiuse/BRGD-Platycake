@@ -25,6 +25,8 @@ public class Inventory : MonoBehaviour
     public GameObject inventoryItem;
     public GameObject worldItem;
 
+    public const float THROW_VELOCITY = 10f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -66,8 +68,23 @@ public class Inventory : MonoBehaviour
             worldItemScript.SetItem(item);
 
             itemObject.transform.position = this.transform.position;
-            itemObject.GetComponent<Rigidbody>().velocity = new Vector3(2f, 0f, 0f);
+
+            itemObject.GetComponent<Rigidbody>().velocity = calculateThrowVelocity();
             display();
+        }
+    }
+
+    private Vector3 calculateThrowVelocity() {
+        // Get all NPC positions
+        Vector3[] npcPositions = Array
+            .ConvertAll<NPC, Vector3>(FindObjectsOfType<NPC>(), (npc) => npc.gameObject.transform.position);
+        // Sort NPCs by distance to player
+        Array.Sort(npcPositions, (p1, p2) =>
+                Vector3.Distance(p1, transform.position).CompareTo(Vector3.Distance(p2, transform.position)));
+        if(npcPositions.Length > 0) {
+            return (npcPositions[0] - this.transform.position).normalized * THROW_VELOCITY;
+        } else {
+            throw new Exception("No NPCs in world");
         }
     }
 
