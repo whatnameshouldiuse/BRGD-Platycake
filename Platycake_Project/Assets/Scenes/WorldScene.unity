@@ -3267,6 +3267,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7599942018225052229, guid: 49d4a9af070311047aba3b841230fbf1,
         type: 3}
+      propertyPath: itemTrade.have.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7599942018225052229, guid: 49d4a9af070311047aba3b841230fbf1,
+        type: 3}
       propertyPath: dialogueList.Array.data[0]
       value: Cake sounds really good
       objectReference: {fileID: 0}
@@ -16989,6 +16994,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7599942018225052229, guid: 49d4a9af070311047aba3b841230fbf1,
         type: 3}
+      propertyPath: itemTrade.have.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7599942018225052229, guid: 49d4a9af070311047aba3b841230fbf1,
+        type: 3}
       propertyPath: dialogueList.Array.data[0]
       value: Cake sounds really good
       objectReference: {fileID: 0}
@@ -17032,6 +17042,18 @@ PrefabInstance:
       propertyPath: preQuestDialogueList.Array.data[3]
       value: The bakery in the town has the most wonderful smelling aroma
       objectReference: {fileID: 0}
+    - target: {fileID: 7599942018225052229, guid: 49d4a9af070311047aba3b841230fbf1,
+        type: 3}
+      propertyPath: itemTrade.have.Array.data[0].sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: de5ff2a5d5109314f872301ff71146fd,
+        type: 3}
+    - target: {fileID: 7599942018225052229, guid: 49d4a9af070311047aba3b841230fbf1,
+        type: 3}
+      propertyPath: itemTrade.have.Array.data[1].sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c24501fb5f2b91d4b9b1658f6f5cb131,
+        type: 3}
     - target: {fileID: 7599942018225052229, guid: 49d4a9af070311047aba3b841230fbf1,
         type: 3}
       propertyPath: postQuestDialogueList.Array.data[0]
@@ -18258,6 +18280,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7599942018225052229, guid: 49d4a9af070311047aba3b841230fbf1,
         type: 3}
+      propertyPath: itemTrade.have.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7599942018225052229, guid: 49d4a9af070311047aba3b841230fbf1,
+        type: 3}
       propertyPath: dialogueList.Array.data[0]
       value: Gotta get wood!
       objectReference: {fileID: 0}
@@ -18306,6 +18333,12 @@ PrefabInstance:
       propertyPath: preQuestDialogueList.Array.data[2]
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 7599942018225052229, guid: 49d4a9af070311047aba3b841230fbf1,
+        type: 3}
+      propertyPath: itemTrade.have.Array.data[0].sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 2cf1445acc25f0a4ca8ed320f9a256a6,
+        type: 3}
     - target: {fileID: 7599942018225052229, guid: 49d4a9af070311047aba3b841230fbf1,
         type: 3}
       propertyPath: postQuestDialogueList.Array.data[0]
@@ -31612,6 +31645,11 @@ PrefabInstance:
         type: 3}
     - target: {fileID: 7599942018225052229, guid: 49d4a9af070311047aba3b841230fbf1,
         type: 3}
+      propertyPath: itemTrade.have.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7599942018225052229, guid: 49d4a9af070311047aba3b841230fbf1,
+        type: 3}
       propertyPath: itemTrade.have.isIngredient
       value: 1
       objectReference: {fileID: 0}
@@ -31645,6 +31683,12 @@ PrefabInstance:
       propertyPath: preQuestDialogueList.Array.data[3]
       value: Sssay, would you mind giving me some wood for this oven?
       objectReference: {fileID: 0}
+    - target: {fileID: 7599942018225052229, guid: 49d4a9af070311047aba3b841230fbf1,
+        type: 3}
+      propertyPath: itemTrade.have.Array.data[0].sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: a0b6199ab3f1c46a6ace6fd86e85d7fc,
+        type: 3}
     - target: {fileID: 7599942018225052229, guid: 49d4a9af070311047aba3b841230fbf1,
         type: 3}
       propertyPath: postQuestDialogueList.Array.data[0]

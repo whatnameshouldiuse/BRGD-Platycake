@@ -12,8 +12,8 @@ public class NPC : MonoBehaviour
         // The item the NPC wants
         public Inventory.Item want;
 
-        // The item the NPC needs
-        public Inventory.Item have;
+        // The item the NPC gives
+        public List<Inventory.Item> have;
     }
 
     public ItemTrade itemTrade;
@@ -72,7 +72,10 @@ public class NPC : MonoBehaviour
             if(item.sprite == itemTrade.want.sprite) {
                 dialogueQueue = new Queue<string>(postQuestDialogueList);
                 // The item in the item holder is what the NPC wants, throw out a new item
-                dropItem(itemTrade.have);
+                foreach(Inventory.Item returnItem in itemTrade.have)
+                {
+                    dropItem(returnItem);
+                }
                 // Play sound
                 audioSource.PlayOneShot(itemReceive, 0.5f);
             } else {
