@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public AudioSource audioSource;
     private float speed = 500f;
     private Rigidbody rb;
     public Animator animator;
@@ -11,6 +12,8 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //audioSource.volume = 0f;
+        audioSource.Play();
         rb = GetComponent<Rigidbody>();
     }
 
@@ -22,9 +25,11 @@ public class PlayerMovement : MonoBehaviour
        
        //animation handler
         if (x != 0 || z !=0) {
+            audioSource.volume = 1.0f;
              animator.SetBool("isWalking",true);
         }
         else{
+            audioSource.volume = 0f;
             animator.SetBool("isWalking",false);
         }
         

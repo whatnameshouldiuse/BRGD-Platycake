@@ -24,6 +24,9 @@ public class NPC : MonoBehaviour
 
     public GameObject worldItem;
 
+    public AudioClip itemReceive;
+    public AudioSource audioSource;
+
     private Queue<string> dialogueQueue;
     private GameObject player;
 
@@ -67,6 +70,8 @@ public class NPC : MonoBehaviour
             if(item.sprite == itemTrade.want.sprite) {
                 // The item in the item holder is what the NPC wants, throw out a new item
                 dropItem(itemTrade.have);
+                // Play sound
+                audioSource.PlayOneShot(itemReceive, 0.5f);
             } else {
                 // The item in the item holder is not needed by the NPC, so throw it out...
                 dropItem(item);
