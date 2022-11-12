@@ -19,7 +19,9 @@ public class NPC : MonoBehaviour
     public ItemTrade itemTrade;
 
     public GameObject canvas;
-    public List<string> dialogueList;
+    public List<string> preQuestDialogueList;
+    public List<string> postQuestDialogueList;
+
     public TextMeshProUGUI dialogueText;
 
     public GameObject worldItem;
@@ -42,7 +44,7 @@ public class NPC : MonoBehaviour
         this.player = players[0];
         this.canvas.transform.localScale = Vector3.zero;
 
-        this.dialogueQueue = new Queue<string>(dialogueList);
+        this.dialogueQueue = new Queue<string>(preQuestDialogueList);
 
         this.itemHolder = this.GetComponent<ItemHolder>();
     }
@@ -68,6 +70,7 @@ public class NPC : MonoBehaviour
     private void checkCurrentItems() {
         foreach(Inventory.Item item in this.itemHolder.itemList) {
             if(item.sprite == itemTrade.want.sprite) {
+                dialogueQueue = new Queue<string>(postQuestDialogueList);
                 // The item in the item holder is what the NPC wants, throw out a new item
                 dropItem(itemTrade.have);
                 // Play sound
