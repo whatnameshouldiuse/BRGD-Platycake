@@ -17980,6 +17980,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7599942018225052229, guid: 49d4a9af070311047aba3b841230fbf1,
         type: 3}
+      propertyPath: itemTrade.have.sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 6d871275e59f248d79096cd1f2f7910a,
+        type: 3}
+    - target: {fileID: 7599942018225052229, guid: 49d4a9af070311047aba3b841230fbf1,
+        type: 3}
+      propertyPath: itemTrade.want.sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: a0b6199ab3f1c46a6ace6fd86e85d7fc,
+        type: 3}
+    - target: {fileID: 7599942018225052229, guid: 49d4a9af070311047aba3b841230fbf1,
+        type: 3}
       propertyPath: dialogue.Array.data[0]
       value: Hello world
       objectReference: {fileID: 0}
@@ -18002,6 +18014,16 @@ PrefabInstance:
         type: 3}
       propertyPath: dialogueList.Array.data[2]
       value: Peck peck peck peck
+      objectReference: {fileID: 0}
+    - target: {fileID: 7599942018225052229, guid: 49d4a9af070311047aba3b841230fbf1,
+        type: 3}
+      propertyPath: itemTrade.have.isIngredient
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7599942018225052229, guid: 49d4a9af070311047aba3b841230fbf1,
+        type: 3}
+      propertyPath: itemTrade.want.isIngredient
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: -8720611212432521473, guid: 49d4a9af070311047aba3b841230fbf1, type: 3}
