@@ -27,10 +27,10 @@ public class PlayerItemCollider : MonoBehaviour
         }
         else if(collider.gameObject.layer == LayerMask.NameToLayer("Pond"))
         {
-            playerScript.canFish = true;
             fishingText.gameObject.SetActive(true);
             if (fishingRodUI.gameObject.activeSelf)
             {
+                playerScript.canFish = true;
                 fishingText.text = "Press F to go fishing!";
             }
             else
@@ -42,10 +42,10 @@ public class PlayerItemCollider : MonoBehaviour
         }
         else if (collider.gameObject.layer == LayerMask.NameToLayer("WingTree"))
         {
-            playerScript.canTree = true;
             fishingText.gameObject.SetActive(true);
             if (fishingRodUI.gameObject.activeSelf)
             {
+                playerScript.canTree = true;
                 fishingText.text = "Press F to retrieve wing";
             }
             else
@@ -59,13 +59,15 @@ public class PlayerItemCollider : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (GetComponent<Collider>().gameObject.layer == LayerMask.NameToLayer("Pond"))
+        if (other.gameObject.layer == LayerMask.NameToLayer("Pond"))
         {
             playerScript.canFish = false;
+            fishingText.gameObject.SetActive(false);
         }
-        if (GetComponent<Collider>().gameObject.layer == LayerMask.NameToLayer("WingTree"))
+        if (other.gameObject.layer == LayerMask.NameToLayer("WingTree"))
         {
             playerScript.canTree = false;
+            fishingText.gameObject.SetActive(false);
         }
     }
 

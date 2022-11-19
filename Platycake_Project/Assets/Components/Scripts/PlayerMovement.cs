@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -10,9 +11,14 @@ public class PlayerMovement : MonoBehaviour
     public Animator animator;
     public bool canFish = false;
     public bool canTree = false;
+    private bool droppedWing = false;
     [SerializeField] private Inventory.Item fish;
     [SerializeField] private Inventory.Item wing;
     public GameObject worldItem;
+    [SerializeField] private GameObject wingTree;
+    [SerializeField] private GameObject winglessTree;
+    [SerializeField] private TextMeshProUGUI fishingText;
+
 
     // Start is called before the first frame update
     void Start()
@@ -55,9 +61,10 @@ public class PlayerMovement : MonoBehaviour
             {
                 dropFish();
             }
-            if (canTree)
+            if (canTree & !droppedWing)
             {
                 dropWing();
+                droppedWing = true;
             }
         }
     }
@@ -76,6 +83,9 @@ public class PlayerMovement : MonoBehaviour
 
     private void dropWing()
     {
+        wingTree.SetActive(false);
+        winglessTree.SetActive(true);
+        fishingText.gameObject.SetActive(false);
         GameObject itemObject = Instantiate(worldItem) as GameObject;
         itemObject.GetComponent<SpriteRenderer>().sprite = wing.sprite;
 
