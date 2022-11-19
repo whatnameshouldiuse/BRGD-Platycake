@@ -3500,7 +3500,7 @@ PrefabInstance:
     - target: {fileID: 1820876686054677213, guid: 49d4a9af070311047aba3b841230fbf1,
         type: 3}
       propertyPath: m_RootOrder
-      value: 24
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 1820876686054677213, guid: 49d4a9af070311047aba3b841230fbf1,
         type: 3}
@@ -3571,7 +3571,7 @@ PrefabInstance:
         type: 3}
       propertyPath: itemTrade.want.sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 6d871275e59f248d79096cd1f2f7910a,
+      objectReference: {fileID: 21300000, guid: 6563c306f86ee9b9a8b18e01013bdc6e,
         type: 3}
     - target: {fileID: 7599942018225052229, guid: 49d4a9af070311047aba3b841230fbf1,
         type: 3}
@@ -3606,12 +3606,12 @@ PrefabInstance:
     - target: {fileID: 7599942018225052229, guid: 49d4a9af070311047aba3b841230fbf1,
         type: 3}
       propertyPath: preQuestDialogueList.Array.size
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7599942018225052229, guid: 49d4a9af070311047aba3b841230fbf1,
         type: 3}
       propertyPath: postQuestDialogueList.Array.size
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7599942018225052229, guid: 49d4a9af070311047aba3b841230fbf1,
         type: 3}
@@ -3621,28 +3621,27 @@ PrefabInstance:
     - target: {fileID: 7599942018225052229, guid: 49d4a9af070311047aba3b841230fbf1,
         type: 3}
       propertyPath: preQuestDialogueList.Array.data[1]
-      value: Hey there, sweetie
+      value: "Aw shucks, I can\u2019t moooove my milk truck with this flat tire\u2026"
       objectReference: {fileID: 0}
     - target: {fileID: 7599942018225052229, guid: 49d4a9af070311047aba3b841230fbf1,
         type: 3}
       propertyPath: preQuestDialogueList.Array.data[2]
-      value: "Sorry, but I\u2019m in a bit of a pickle at the moment"
+      value: How am I gonna finish this delivery?
       objectReference: {fileID: 0}
     - target: {fileID: 7599942018225052229, guid: 49d4a9af070311047aba3b841230fbf1,
         type: 3}
       propertyPath: preQuestDialogueList.Array.data[3]
-      value: I finally found a way to take to the skies like that mailman
+      value: "Ya wouldn\u2019t happen to have a spare tire on ya, wouldja?"
       objectReference: {fileID: 0}
     - target: {fileID: 7599942018225052229, guid: 49d4a9af070311047aba3b841230fbf1,
         type: 3}
       propertyPath: preQuestDialogueList.Array.data[4]
-      value: "But when I took my baby out for spin, I got her stuck in that big ol\u2019
-        tree!"
+      value: "I\u2019d be real grateful if you could help a neighbor out!"
       objectReference: {fileID: 0}
     - target: {fileID: 7599942018225052229, guid: 49d4a9af070311047aba3b841230fbf1,
         type: 3}
       propertyPath: preQuestDialogueList.Array.data[5]
-      value: Do you think you could help me get my baby down from that tree, sweetie?
+      value: "That chicken\u2019s always got sum junk or whatnot at \u2018er workshop"
       objectReference: {fileID: 0}
     - target: {fileID: 7599942018225052229, guid: 49d4a9af070311047aba3b841230fbf1,
         type: 3}
@@ -3665,16 +3664,21 @@ PrefabInstance:
     - target: {fileID: 7599942018225052229, guid: 49d4a9af070311047aba3b841230fbf1,
         type: 3}
       propertyPath: postQuestDialogueList.Array.data[0]
-      value: Here, have some eggs, for saving my baby!
+      value: Aw yeah! Thanks a bunch, neighbor!
       objectReference: {fileID: 0}
     - target: {fileID: 7599942018225052229, guid: 49d4a9af070311047aba3b841230fbf1,
         type: 3}
       propertyPath: postQuestDialogueList.Array.data[1]
-      value: ...
+      value: "I\u2019ll finally be able to get moooooving again!"
       objectReference: {fileID: 0}
     - target: {fileID: 7599942018225052229, guid: 49d4a9af070311047aba3b841230fbf1,
         type: 3}
       propertyPath: postQuestDialogueList.Array.data[2]
+      value: Enjoy the milk, neighbor!
+      objectReference: {fileID: 0}
+    - target: {fileID: 7599942018225052229, guid: 49d4a9af070311047aba3b841230fbf1,
+        type: 3}
+      propertyPath: postQuestDialogueList.Array.data[3]
       value: ...
       objectReference: {fileID: 0}
     - target: {fileID: 7599942018225052229, guid: 49d4a9af070311047aba3b841230fbf1,
@@ -7015,6 +7019,112 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 406924833}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &384460304
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 410605925446991712, guid: d1e274ba169155307b664e04e5904fd4,
+        type: 3}
+      propertyPath: m_Name
+      value: Axe
+      objectReference: {fileID: 0}
+    - target: {fileID: 410605925446991712, guid: d1e274ba169155307b664e04e5904fd4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1077799815484693309, guid: d1e274ba169155307b664e04e5904fd4,
+        type: 3}
+      propertyPath: item.sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 287619e772acb224e93a34c8f90de755,
+        type: 3}
+    - target: {fileID: 5098148049863249575, guid: d1e274ba169155307b664e04e5904fd4,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 2.56
+      objectReference: {fileID: 0}
+    - target: {fileID: 5098148049863249575, guid: d1e274ba169155307b664e04e5904fd4,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 2.56
+      objectReference: {fileID: 0}
+    - target: {fileID: 5098148049863249575, guid: d1e274ba169155307b664e04e5904fd4,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 287619e772acb224e93a34c8f90de755,
+        type: 3}
+    - target: {fileID: 5098148049863249575, guid: d1e274ba169155307b664e04e5904fd4,
+        type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8266699371564613594, guid: d1e274ba169155307b664e04e5904fd4,
+        type: 3}
+      propertyPath: m_Center.y
+      value: -5.47
+      objectReference: {fileID: 0}
+    - target: {fileID: 8554890363322287798, guid: d1e274ba169155307b664e04e5904fd4,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 22
+      objectReference: {fileID: 0}
+    - target: {fileID: 8554890363322287798, guid: d1e274ba169155307b664e04e5904fd4,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 47.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 8554890363322287798, guid: d1e274ba169155307b664e04e5904fd4,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.07
+      objectReference: {fileID: 0}
+    - target: {fileID: 8554890363322287798, guid: d1e274ba169155307b664e04e5904fd4,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 10.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8554890363322287798, guid: d1e274ba169155307b664e04e5904fd4,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8554890363322287798, guid: d1e274ba169155307b664e04e5904fd4,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8554890363322287798, guid: d1e274ba169155307b664e04e5904fd4,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8554890363322287798, guid: d1e274ba169155307b664e04e5904fd4,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8554890363322287798, guid: d1e274ba169155307b664e04e5904fd4,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8554890363322287798, guid: d1e274ba169155307b664e04e5904fd4,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8554890363322287798, guid: d1e274ba169155307b664e04e5904fd4,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d1e274ba169155307b664e04e5904fd4, type: 3}
 --- !u!1001 &389676854
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13228,7 +13338,7 @@ PrefabInstance:
         type: 3}
       propertyPath: item.sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 66c00642e70e346c6b5a6ccb5ebddfc2,
+      objectReference: {fileID: 21300000, guid: 882b4fb6ec7f9346fa4a7698e73927d8,
         type: 3}
     - target: {fileID: 5098148049863249575, guid: d1e274ba169155307b664e04e5904fd4,
         type: 3}
@@ -13244,12 +13354,17 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 66c00642e70e346c6b5a6ccb5ebddfc2,
+      objectReference: {fileID: 21300000, guid: 882b4fb6ec7f9346fa4a7698e73927d8,
         type: 3}
     - target: {fileID: 5098148049863249575, guid: d1e274ba169155307b664e04e5904fd4,
         type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8266699371564613594, guid: d1e274ba169155307b664e04e5904fd4,
+        type: 3}
+      propertyPath: m_Center.y
+      value: -3.12
       objectReference: {fileID: 0}
     - target: {fileID: 8554890363322287798, guid: d1e274ba169155307b664e04e5904fd4,
         type: 3}
@@ -18535,7 +18650,7 @@ PrefabInstance:
     - target: {fileID: 1820876686054677213, guid: 49d4a9af070311047aba3b841230fbf1,
         type: 3}
       propertyPath: m_RootOrder
-      value: 23
+      value: 24
       objectReference: {fileID: 0}
     - target: {fileID: 1820876686054677213, guid: 49d4a9af070311047aba3b841230fbf1,
         type: 3}
@@ -18689,7 +18804,7 @@ PrefabInstance:
         type: 3}
       propertyPath: itemTrade.have.Array.data[0].sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 6d871275e59f248d79096cd1f2f7910a,
+      objectReference: {fileID: 21300000, guid: 6563c306f86ee9b9a8b18e01013bdc6e,
         type: 3}
     - target: {fileID: 7599942018225052229, guid: 49d4a9af070311047aba3b841230fbf1,
         type: 3}
@@ -21079,7 +21194,7 @@ PrefabInstance:
         type: 3}
       propertyPath: itemTrade.want.sprite
       value: 
-      objectReference: {fileID: 21300000, guid: a0b6199ab3f1c46a6ace6fd86e85d7fc,
+      objectReference: {fileID: 21300000, guid: 287619e772acb224e93a34c8f90de755,
         type: 3}
     - target: {fileID: 7599942018225052229, guid: 49d4a9af070311047aba3b841230fbf1,
         type: 3}
@@ -21150,7 +21265,7 @@ PrefabInstance:
         type: 3}
       propertyPath: itemTrade.have.Array.data[0].sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 2cf1445acc25f0a4ca8ed320f9a256a6,
+      objectReference: {fileID: 21300000, guid: 1e35f4db1484d1340b02ae54db68abba,
         type: 3}
     - target: {fileID: 7599942018225052229, guid: 49d4a9af070311047aba3b841230fbf1,
         type: 3}
@@ -22306,7 +22421,7 @@ PrefabInstance:
     - target: {fileID: 2491756352488095167, guid: e9bcabb7d7bc7104997d574d60a56b93,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6770669864155975534, guid: e9bcabb7d7bc7104997d574d60a56b93,
         type: 3}
@@ -25577,6 +25692,11 @@ PrefabInstance:
       propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8266699371564613594, guid: d1e274ba169155307b664e04e5904fd4,
+        type: 3}
+      propertyPath: m_Center.y
+      value: -5.13
+      objectReference: {fileID: 0}
     - target: {fileID: 8554890363322287798, guid: d1e274ba169155307b664e04e5904fd4,
         type: 3}
       propertyPath: m_RootOrder
@@ -25741,7 +25861,7 @@ PrefabInstance:
         type: 3}
       propertyPath: itemTrade.want.sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 66c00642e70e346c6b5a6ccb5ebddfc2,
+      objectReference: {fileID: 21300000, guid: 882b4fb6ec7f9346fa4a7698e73927d8,
         type: 3}
     - target: {fileID: 7599942018225052229, guid: 49d4a9af070311047aba3b841230fbf1,
         type: 3}
@@ -27319,7 +27439,7 @@ PrefabInstance:
         type: 3}
       propertyPath: itemTrade.want.sprite
       value: 
-      objectReference: {fileID: 21300000, guid: a0b6199ab3f1c46a6ace6fd86e85d7fc,
+      objectReference: {fileID: 21300000, guid: 4bd7079e3c202677491d0d783361bbe0,
         type: 3}
     - target: {fileID: 7599942018225052229, guid: 49d4a9af070311047aba3b841230fbf1,
         type: 3}
@@ -27753,7 +27873,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 26
+  m_RootOrder: 27
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1417362794
 PrefabInstance:
@@ -29584,7 +29704,7 @@ PrefabInstance:
     - target: {fileID: 2491756352488095167, guid: e9bcabb7d7bc7104997d574d60a56b93,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6770669864155975534, guid: e9bcabb7d7bc7104997d574d60a56b93,
         type: 3}
@@ -29747,7 +29867,7 @@ MonoBehaviour:
   fish:
     isIngredient: 0
     fromPlayer: 0
-    sprite: {fileID: 21300000, guid: a0b6199ab3f1c46a6ace6fd86e85d7fc, type: 3}
+    sprite: {fileID: 21300000, guid: 4bd7079e3c202677491d0d783361bbe0, type: 3}
   wing:
     isIngredient: 0
     fromPlayer: 0
@@ -32372,7 +32492,7 @@ Transform:
   - {fileID: 1134181128}
   - {fileID: 1485467759}
   m_Father: {fileID: 0}
-  m_RootOrder: 22
+  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1597485345 stripped
 Transform:
@@ -32792,7 +32912,7 @@ Transform:
   - {fileID: 433997107}
   - {fileID: 1534011309}
   m_Father: {fileID: 0}
-  m_RootOrder: 25
+  m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1618919064 stripped
 Transform:
@@ -38250,7 +38370,7 @@ PrefabInstance:
         type: 3}
       propertyPath: itemTrade.want.sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 2cf1445acc25f0a4ca8ed320f9a256a6,
+      objectReference: {fileID: 21300000, guid: 1e35f4db1484d1340b02ae54db68abba,
         type: 3}
     - target: {fileID: 7599942018225052229, guid: 49d4a9af070311047aba3b841230fbf1,
         type: 3}
