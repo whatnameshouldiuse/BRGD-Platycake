@@ -18,6 +18,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private GameObject wingTree;
     [SerializeField] private GameObject winglessTree;
     [SerializeField] private TextMeshProUGUI fishingText;
+    [SerializeField] private GameObject platypusSprite;
 
 
     // Start is called before the first frame update
@@ -33,24 +34,26 @@ public class PlayerMovement : MonoBehaviour
         float x = Input.GetAxisRaw("Horizontal");
         float z = Input.GetAxisRaw("Vertical");
         rb.velocity = new Vector3(x, rb.velocity.y, z) * speed * Time.deltaTime;
-       
-       //animation handler
-        if (x != 0 || z !=0) {
+        if(x < 0)
+        {
+            platypusSprite.transform.localScale = Vector3.one;
+        }
+        else if(x > 0)
+        {
+            platypusSprite.transform.localScale = Vector3.one - 2 * Vector3.right;
+        }
+
+        //animation handler
+        if (x != 0 || z != 0)
+        {
             audioSource.volume = 1.0f;
-             animator.SetBool("isWalking",true);
+            animator.SetBool("isWalking", true);
         }
-        else{
+        else
+        {
             audioSource.volume = 0f;
-            animator.SetBool("isWalking",false);
+            animator.SetBool("isWalking", false);
         }
-        
-        if(Input.GetKeyDown("e")){
-            animator.SetBool("isThrowing",true);
-        }
-         if(Input.GetKeyUp("e")){
-            animator.SetBool("isThrowing",false);
-        }
-        
     }
 
     private void Update()
@@ -66,6 +69,10 @@ public class PlayerMovement : MonoBehaviour
                 dropWing();
                 droppedWing = true;
             }
+        }
+        if (Input.GetKeyDown("e"))
+        {
+            animator.SetTrigger("throw");
         }
     }
 

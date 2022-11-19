@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18365584, g: 0.22795248, b: 0.29831448, a: 1}
+  m_IndirectSpecularColor: {r: 0.18365629, g: 0.22795315, b: 0.29831558, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -19715,7 +19715,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1850784037}
   m_RootOrder: 0
@@ -29877,6 +29877,7 @@ MonoBehaviour:
   wingTree: {fileID: 1134181125}
   winglessTree: {fileID: 1485467760}
   fishingText: {fileID: 1216262818}
+  platypusSprite: {fileID: 1016905636}
 --- !u!65 &1486415969
 BoxCollider:
   m_ObjectHideFlags: 0
