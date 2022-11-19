@@ -37,7 +37,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 6}
+  m_AnchoredPosition: {x: 0, y: 8.84}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &473853221773421598
@@ -251,6 +251,7 @@ GameObject:
   - component: {fileID: 7055289912915821080}
   - component: {fileID: 8901850017923365021}
   - component: {fileID: 3127997704230107098}
+  - component: {fileID: 1634600799286205709}
   m_Layer: 0
   m_Name: NPC
   m_TagString: Untagged
@@ -338,22 +339,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8fa4801e0a406383bcf21b2f3e1df3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isGrandma: 0
   itemTrade:
     want:
       isIngredient: 0
       fromPlayer: 0
       sprite: {fileID: 0}
     have:
-      isIngredient: 0
+    - isIngredient: 0
+      fromPlayer: 0
+      sprite: {fileID: 0}
+    - isIngredient: 0
+      fromPlayer: 0
+      sprite: {fileID: 0}
+    - isIngredient: 0
       fromPlayer: 0
       sprite: {fileID: 0}
   canvas: {fileID: 2547995615147620872}
-  dialogueList: []
+  preQuestDialogueList: []
+  postQuestDialogueList: []
   dialogueText: {fileID: 2182888068021446821}
   worldItem: {fileID: 410605925446991712, guid: d1e274ba169155307b664e04e5904fd4,
     type: 3}
   itemReceive: {fileID: 8300000, guid: 554dab3ee34e135279a689fd3138311e, type: 3}
-  audioSource: {fileID: 3127997704230107098}
+  npcVoice: {fileID: 0}
+  itemAudioSource: {fileID: 3127997704230107098}
+  voiceAudioSource: {fileID: 1634600799286205709}
 --- !u!114 &-4178509710664245106
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -393,6 +404,102 @@ SphereCollider:
   m_Radius: 6.24
   m_Center: {x: 0, y: -5.02, z: 0}
 --- !u!82 &3127997704230107098
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6299965501110725557}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!82 &1634600799286205709
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
