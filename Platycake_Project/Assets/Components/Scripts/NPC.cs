@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using System;
+using UnityEngine.SceneManagement;
 
 public class NPC : MonoBehaviour
 {
@@ -15,6 +16,7 @@ public class NPC : MonoBehaviour
         // The item the NPC gives
         public List<Inventory.Item> have;
     }
+    [SerializeField] bool isGrandma = false;
 
     public ItemTrade itemTrade;
 
@@ -70,6 +72,10 @@ public class NPC : MonoBehaviour
     private void checkCurrentItems() {
         foreach(Inventory.Item item in this.itemHolder.itemList) {
             if(item.sprite == itemTrade.want.sprite) {
+                if (isGrandma)
+                {
+                    SceneManager.LoadScene("EndCard");
+                }
                 dialogueQueue = new Queue<string>(postQuestDialogueList);
                 // The item in the item holder is what the NPC wants, throw out a new item
                 foreach(Inventory.Item returnItem in itemTrade.have)
