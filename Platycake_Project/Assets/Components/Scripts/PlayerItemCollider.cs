@@ -1,10 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class PlayerItemCollider : MonoBehaviour
 {
     public Inventory inventory;
+    public PlayerMovement playerScript;
+    [SerializeField] private Image fishingRodUI;
+    [SerializeField] private TextMeshProUGUI fishingText;
 
     void OnTriggerEnter(Collider collider) {
         // Check if the gameObject of the collider is an item
@@ -15,5 +20,60 @@ public class PlayerItemCollider : MonoBehaviour
                 Destroy(collider.gameObject);
             }
         }
+        else if(collider.gameObject.layer == LayerMask.NameToLayer("FishingRod"))
+        {
+            Destroy(collider.gameObject);
+            fishingRodUI.gameObject.SetActive(true);
+        }
+        else if(collider.gameObject.layer == LayerMask.NameToLayer("Pond"))
+        {
+            fishingText.gameObject.SetActive(true);
+            if (fishingRodUI.gameObject.activeSelf)
+            {
+                playerScript.canFish = true;
+                fishingText.text = "Press F to go fishing!";
+            }
+            else
+            {
+                fishingText.text = "You need a fishing rod!";
+            }
+            IEnumerator coroutine = ShowThenHideText();
+            StartCoroutine(coroutine);
+        }
+        else if (collider.gameObject.layer == LayerMask.NameToLayer("WingTree"))
+        {
+            fishingText.gameObject.SetActive(true);
+            if (fishingRodUI.gameObject.activeSelf)
+            {
+                playerScript.canTree = true;
+                fishingText.text = "Press F to retrieve wing";
+            }
+            else
+            {
+                fishingText.text = "You need a fishing rod to reach the wing!";
+            }
+            IEnumerator coroutine = ShowThenHideText();
+            StartCoroutine(coroutine);
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.layer == LayerMask.NameToLayer("Pond"))
+        {
+            playerScript.canFish = false;
+            fishingText.gameObject.SetActive(false);
+        }
+        if (other.gameObject.layer == LayerMask.NameToLayer("WingTree"))
+        {
+            playerScript.canTree = false;
+            fishingText.gameObject.SetActive(false);
+        }
+    }
+
+        private IEnumerator ShowThenHideText()
+    {
+        yield return new WaitForSeconds(5);
+        fishingText.gameObject.SetActive(false);
     }
 }

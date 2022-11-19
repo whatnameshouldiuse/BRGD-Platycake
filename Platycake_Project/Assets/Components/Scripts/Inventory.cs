@@ -30,9 +30,6 @@ public class Inventory : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        itemQueue.Enqueue(new Item(true, true, this.sprites[0]));
-        itemQueue.Enqueue(new Item(true, true, this.sprites[1]));
-        itemQueue.Enqueue(new Item(true, true, this.sprites[2]));
         display();
     }
 
