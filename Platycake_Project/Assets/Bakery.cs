@@ -31,7 +31,7 @@ public class Bakery : MonoBehaviour
 
     private ItemHolder itemHolder;
 
-    private const double RADIUS = 10f;
+    private const double RADIUS = 22f;
     private const float INTERPOLATION = 0.1f;
 
     // Start is called before the first frame update
