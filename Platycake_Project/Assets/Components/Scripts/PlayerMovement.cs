@@ -5,9 +5,14 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public AudioSource audioSource;
-    private float speed = 500f;
+    [SerializeField] private float speed = 500f;
     private Rigidbody rb;
     public Animator animator;
+    public bool canFish = false;
+    public bool canTree = false;
+    [SerializeField] private Inventory.Item fish;
+    [SerializeField] private Inventory.Item wing;
+    public GameObject worldItem;
 
     // Start is called before the first frame update
     void Start()
@@ -40,5 +45,44 @@ public class PlayerMovement : MonoBehaviour
             animator.SetBool("isThrowing",false);
         }
         
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown("f"))
+        {
+            if (canFish)
+            {
+                dropFish();
+            }
+            if (canTree)
+            {
+                dropWing();
+            }
+        }
+    }
+
+    private void dropFish()
+    {
+        GameObject itemObject = Instantiate(worldItem) as GameObject;
+        itemObject.GetComponent<SpriteRenderer>().sprite = fish.sprite;
+
+        WorldItem worldItemScript = itemObject.GetComponent<WorldItem>();
+        fish.fromPlayer = false;
+        worldItemScript.SetItem(fish);
+
+        itemObject.transform.position = this.transform.position + Vector3.up*6;
+    }
+
+    private void dropWing()
+    {
+        GameObject itemObject = Instantiate(worldItem) as GameObject;
+        itemObject.GetComponent<SpriteRenderer>().sprite = wing.sprite;
+
+        WorldItem worldItemScript = itemObject.GetComponent<WorldItem>();
+        wing.fromPlayer = false;
+        worldItemScript.SetItem(wing);
+
+        itemObject.transform.position = this.transform.position + Vector3.up * 6;
     }
 }
