@@ -29,7 +29,9 @@ public class NPC : MonoBehaviour
     public GameObject worldItem;
 
     public AudioClip itemReceive;
-    public AudioSource audioSource;
+    public AudioClip npcVoice;
+    public AudioSource itemAudioSource;
+    public AudioSource voiceAudioSource;
 
     private Queue<string> dialogueQueue;
     private GameObject player;
@@ -62,6 +64,10 @@ public class NPC : MonoBehaviour
         if(dialogueQueue.Count > 0) {
             if(isWithinDistance && Input.GetKeyDown(KeyCode.Space)) {
                 dialogueQueue.Enqueue(dialogueQueue.Dequeue());
+                if(dialogueQueue.Peek() != "...") {
+                    voiceAudioSource.Stop();
+                    voiceAudioSource.PlayOneShot(npcVoice, 0.4f);
+                }
             }
             dialogueText.text = dialogueQueue.Peek();
         }
@@ -83,7 +89,7 @@ public class NPC : MonoBehaviour
                     dropItem(returnItem);
                 }
                 // Play sound
-                audioSource.PlayOneShot(itemReceive, 0.5f);
+                itemAudioSource.PlayOneShot(itemReceive, 0.5f);
             } else {
                 // The item in the item holder is not needed by the NPC, so throw it out...
                 dropItem(item);

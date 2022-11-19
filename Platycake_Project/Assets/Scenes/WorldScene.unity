@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18365629, g: 0.22795315, b: 0.29831558, a: 1}
+  m_IndirectSpecularColor: {r: 0.18365584, g: 0.22795248, b: 0.29831448, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3377,6 +3377,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7599942018225052229, guid: 49d4a9af070311047aba3b841230fbf1,
         type: 3}
+      propertyPath: npcVoice
+      value: 
+      objectReference: {fileID: 8300000, guid: a687b086e75ff52d5a12ccf9138e7f9a, type: 3}
+    - target: {fileID: 7599942018225052229, guid: 49d4a9af070311047aba3b841230fbf1,
+        type: 3}
       propertyPath: isGrandma
       value: 1
       objectReference: {fileID: 0}
@@ -3552,6 +3557,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cow
       objectReference: {fileID: 0}
+    - target: {fileID: 7599942018225052229, guid: 49d4a9af070311047aba3b841230fbf1,
+        type: 3}
+      propertyPath: npcVoice
+      value: 
+      objectReference: {fileID: 8300000, guid: 1bab5f992a2a176a7b263255aea84e46, type: 3}
     - target: {fileID: 7599942018225052229, guid: 49d4a9af070311047aba3b841230fbf1,
         type: 3}
       propertyPath: dialogue.Array.size
@@ -18584,6 +18594,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7599942018225052229, guid: 49d4a9af070311047aba3b841230fbf1,
         type: 3}
+      propertyPath: npcVoice
+      value: 
+      objectReference: {fileID: 8300000, guid: 8f6e6c42d985f75cea50a83ad2c771a8, type: 3}
+    - target: {fileID: 7599942018225052229, guid: 49d4a9af070311047aba3b841230fbf1,
+        type: 3}
       propertyPath: dialogue.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -21046,6 +21061,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7599942018225052229, guid: 49d4a9af070311047aba3b841230fbf1,
         type: 3}
+      propertyPath: npcVoice
+      value: 
+      objectReference: {fileID: 8300000, guid: ae4e2c8695782c5b287e1e036c8624bb, type: 3}
+    - target: {fileID: 7599942018225052229, guid: 49d4a9af070311047aba3b841230fbf1,
+        type: 3}
       propertyPath: dialogue.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -23282,6 +23302,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SugarGlider
       objectReference: {fileID: 0}
+    - target: {fileID: 7599942018225052229, guid: 49d4a9af070311047aba3b841230fbf1,
+        type: 3}
+      propertyPath: npcVoice
+      value: 
+      objectReference: {fileID: 8300000, guid: 6c7a1b1ab9bd8c02682d8581e2c7c9bf, type: 3}
     - target: {fileID: 7599942018225052229, guid: 49d4a9af070311047aba3b841230fbf1,
         type: 3}
       propertyPath: dialogue.Array.size
@@ -25704,6 +25729,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7599942018225052229, guid: 49d4a9af070311047aba3b841230fbf1,
         type: 3}
+      propertyPath: npcVoice
+      value: 
+      objectReference: {fileID: 8300000, guid: f60fc29f640adcec09e7bb274b7ee234, type: 3}
+    - target: {fileID: 7599942018225052229, guid: 49d4a9af070311047aba3b841230fbf1,
+        type: 3}
       propertyPath: dialogue.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -27275,6 +27305,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cat
       objectReference: {fileID: 0}
+    - target: {fileID: 7599942018225052229, guid: 49d4a9af070311047aba3b841230fbf1,
+        type: 3}
+      propertyPath: npcVoice
+      value: 
+      objectReference: {fileID: 8300000, guid: 17d574bef1a1881aa8687aa5be18bb5f, type: 3}
     - target: {fileID: 7599942018225052229, guid: 49d4a9af070311047aba3b841230fbf1,
         type: 3}
       propertyPath: itemTrade.want.sprite
@@ -37947,6 +37982,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Snake
       objectReference: {fileID: 0}
+    - target: {fileID: 7599942018225052229, guid: 49d4a9af070311047aba3b841230fbf1,
+        type: 3}
+      propertyPath: npcVoice
+      value: 
+      objectReference: {fileID: 8300000, guid: 5f490f05bf84fbb71ada1c539a2c2357, type: 3}
     - target: {fileID: 7599942018225052229, guid: 49d4a9af070311047aba3b841230fbf1,
         type: 3}
       propertyPath: itemTrade.want.sprite
