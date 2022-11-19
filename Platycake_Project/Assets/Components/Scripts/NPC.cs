@@ -12,17 +12,22 @@ public class NPC : MonoBehaviour
         // The item the NPC wants
         public Inventory.Item want;
 
-        // The item the NPC needs
-        public Inventory.Item have;
+        // The item the NPC gives
+        public List<Inventory.Item> have;
     }
 
     public ItemTrade itemTrade;
 
     public GameObject canvas;
-    public List<string> dialogueList;
+    public List<string> preQuestDialogueList;
+    public List<string> postQuestDialogueList;
+
     public TextMeshProUGUI dialogueText;
 
     public GameObject worldItem;
+
+    public AudioClip itemReceive;
+    public AudioSource audioSource;
 
     private Queue<string> dialogueQueue;
     private GameObject player;
@@ -39,7 +44,7 @@ public class NPC : MonoBehaviour
         this.player = players[0];
         this.canvas.transform.localScale = Vector3.zero;
 
-        this.dialogueQueue = new Queue<string>(dialogueList);
+        this.dialogueQueue = new Queue<string>(preQuestDialogueList);
 
         this.itemHolder = this.GetComponent<ItemHolder>();
     }
@@ -65,8 +70,14 @@ public class NPC : MonoBehaviour
     private void checkCurrentItems() {
         foreach(Inventory.Item item in this.itemHolder.itemList) {
             if(item.sprite == itemTrade.want.sprite) {
+                dialogueQueue = new Queue<string>(postQuestDialogueList);
                 // The item in the item holder is what the NPC wants, throw out a new item
-                dropItem(itemTrade.have);
+                foreach(Inventory.Item returnItem in itemTrade.have)
+                {
+                    dropItem(returnItem);
+                }
+                // Play sound
+                audioSource.PlayOneShot(itemReceive, 0.5f);
             } else {
                 // The item in the item holder is not needed by the NPC, so throw it out...
                 dropItem(item);

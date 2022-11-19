@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class WorldItem : MonoBehaviour
 {
-    private Inventory.Item item;
+    [SerializeField] private Inventory.Item item;
     private float cooldown;
 
     public void SetItem(Inventory.Item item) {
